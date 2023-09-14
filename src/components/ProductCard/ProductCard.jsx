@@ -4,11 +4,11 @@ import useAxios from '../../hooks/useAxios';
 
 const ProductCard = () => {
     const [products, setProduct] = useState([]);
-    const Axios = useAxios();
+    const API = useAxios();
 
     // Fetch products when the component mounts
     useEffect(() => {
-        Axios.get("/products")
+        API.get("/products")
           .then((res) => {
             setProduct(res.data);
           })

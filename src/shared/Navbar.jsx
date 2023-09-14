@@ -12,6 +12,7 @@ const Navbar = () => {
         <>
             <NavItem route="/" name="Home"></NavItem>
             <NavItem route="/addproduct" name="Add Product"></NavItem>
+            <NavItem route="/allproducts" name="All Products"></NavItem>
             <NavItem route="/cart" name="Cart"></NavItem>
         </>
     );

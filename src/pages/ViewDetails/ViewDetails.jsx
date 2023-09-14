@@ -16,7 +16,7 @@ const ViewDetails = () => {
 
     // Show a toast message when favorite button is clicked
     const handleFavoriteButton = () => {
-        toast('Good Job!', {
+        toast('Wow, Great!', {
             icon: '👏',
           });
     };
@@ -25,7 +25,7 @@ const ViewDetails = () => {
 
         <div className="card hero-content flex-col lg:flex-row w-full bg-slate-200 shadow-xl">
             <Helmet>
-                <title>REPLIQ | Product Details</title>
+                <title>TECH TROVE | Product Details</title>
             </Helmet>
             <img className='sm:w-full md:w-[50%] rounded-lg' src={image} />
             <div className="card-body">
