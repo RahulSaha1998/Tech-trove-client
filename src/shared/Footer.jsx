@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
         <hr className="mt-8 border-gray-700" />
         <p className="text-gray-300 mt-8">
-          © 2023 REPLICA. All rights reserved.
+          © 2023 TECH TROVE. All rights reserved.
         </p>
       </div>
     </footer>

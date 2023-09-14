@@ -7,7 +7,7 @@ const NavItem = ({ route, name, event }) => {
       to={route}
       className={({ isActive }) =>
         isActive
-          ? "text-white font-bold px-3 py-2 rounded-md text-sm"
+          ? "text-yellow-500 font-bold px-3 py-2 rounded-md text-sm"
           : "text-gray-300 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
       }
     >

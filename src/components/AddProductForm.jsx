@@ -67,10 +67,10 @@ const AddProductForm = () => {
             <div>
                 <SectionTitle heading="Add Product" />
             </div>
-            <div className="bg-slate-200 rounded-lg shadow-xl mt-5 md:w-[50%] mx-auto">
+            <div className="bg-zinc-400 rounded-lg shadow-xl mt-5 md:w-[50%] mx-auto">
                 <form
                     onSubmit={handleSubmit(handelAddProduct)}
-                    className="w-[80%] mx-auto "
+                    className="py-5 w-[80%] mx-auto "
                 >
                     <div className="grid grid-cols-2 gap-5">
                         <div className="form-control">
