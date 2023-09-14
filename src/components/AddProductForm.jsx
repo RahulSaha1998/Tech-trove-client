@@ -1,8 +1,8 @@
-// import SectionTitle from "../../components/SectionTitle";
-// import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import toast, { Toaster } from "react-hot-toast";
 import useAxios from "../hooks/useAxios";
+import SectionTitle from "./SectionTitle";
+import { Helmet } from "react-helmet-async";
 
 // Get the image hosting token from environment variables
 const image_hosting_token = import.meta.env.VITE_Image_Upload_Token;
@@ -61,11 +61,11 @@ const AddProductForm = () => {
 
     return (
         <div className="h-full">
-            {/* <Helmet>
-                <title>REPLIQ | Add Product</title>
-            </Helmet> */}
+            <Helmet>
+                <title>TECH TROVE | Add Product</title>
+            </Helmet>
             <div>
-                {/* <SectionTitle heading="Add Product" /> */}
+                <SectionTitle heading="Add Product" />
             </div>
             <div className="bg-slate-200 rounded-lg shadow-xl mt-5 md:w-[50%] mx-auto">
                 <form
