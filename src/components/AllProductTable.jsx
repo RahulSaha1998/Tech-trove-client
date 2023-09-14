@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-const AllProductTable = ({ item, index }) => {
+const AllProductTable = ({ item, index, handleDelete }) => {
 
     const { _id, price, quantity, product_name, image, rating } = item;
 
@@ -17,7 +17,7 @@ const AllProductTable = ({ item, index }) => {
                     <td className='text-center'><Link to={`/dashboard/updateProduct/${_id}`}>
                         <button className='btn btn-info'>Update</button>
                     </Link></td>
-                    <td className='text-center'><button onClick={() => handleDelete(product._id)} className='btn btn-error'>Delete</button></td>
+                    <td className='text-center'><button onClick={() => handleDelete(_id)} className='btn btn-error'>Delete</button></td>
                 </tr>
             </tbody>
         </>

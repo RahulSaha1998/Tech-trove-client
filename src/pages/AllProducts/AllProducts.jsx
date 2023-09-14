@@ -3,28 +3,23 @@ import { Helmet } from "react-helmet-async";
 import SectionTitle from "../../components/SectionTitle";
 import { useState } from "react";
 import AllProductTable from "../../components/AllProductTable";
+import useAxios from "../../hooks/useAxios";
+import toast from "react-hot-toast";
 
 const AllProducts = () => {
+    const API = useAxios();
     const loadedProduct = useLoaderData();
 
     const [products, setProducts] = useState(loadedProduct);
 
 
     const handleDelete = _id => {
-        console.log(_id);
-        fetch(`https://repliq-ecommerce-server-gamma.vercel.app/products/${_id}`, {
-            method: 'DELETE'
-        })
-            .then(res => res.json())
+
+        API.delete(`/products/${_id}`)
             .then(data => {
-                console.log(data);
-                if (data.deletedCount > 0) {
-                    Swal.fire({
-                        icon: 'success',
-                        title: 'Deleted Successful!',
-                        showConfirmButton: false,
-                        timer: 1500
-                    })
+                if (data?.data?.deletedCount > 0) {
+                    toast.success("Product Deleted successfully!");
+    
                     const remaining = products.filter(product => product._id !== _id);
                     setProducts(remaining);
                 }
@@ -59,6 +54,7 @@ const AllProducts = () => {
                                 key={item._id}
                                 item={item}
                                 index={index}
+                                handleDelete={handleDelete}
                             ></AllProductTable>)
                         }
                     </table>
