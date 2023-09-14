@@ -1,5 +1,5 @@
 import { useForm } from "react-hook-form";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 import useAxios from "../hooks/useAxios";
 import SectionTitle from "./SectionTitle";
 import { Helmet } from "react-helmet-async";
@@ -184,7 +184,6 @@ const AddProductForm = () => {
                         />
                     </div>
                 </form>
-                <Toaster />
             </div>
         </div>
     );

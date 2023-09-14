@@ -10,7 +10,7 @@ const CardBody = ({ item }) => {
     //destructure the item from the props
     const { _id, price, quantity, product_name, image, rating, description } = item;
 
-    const Axios = useAxios();
+    const API = useAxios();
 
     const handelAddToCart = item => {
         console.log(item);
@@ -26,7 +26,7 @@ const CardBody = ({ item }) => {
 
 
         //post the product to the server
-        Axios.post("/cartProducts", cartItem)
+        API.post("/cartProducts", cartItem)
             .then((data) => {
                 if (data?.data?.insertedId) {
                     toast.success("Product added to the Cart!");
