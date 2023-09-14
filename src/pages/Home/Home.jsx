@@ -1,8 +1,11 @@
+import { Toaster } from "react-hot-toast";
+import ProductCard from "../../components/ProductCard/ProductCard";
 
 const Home = () => {
     return (
         <div>
-            <h2>Hello from home</h2>
+            <ProductCard/>
+            <Toaster />
         </div>
     );
 };
