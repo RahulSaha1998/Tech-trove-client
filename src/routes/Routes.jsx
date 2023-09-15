@@ -7,6 +7,7 @@ import AllProducts from "../pages/AllProducts/AllProducts";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import MyCart from "../pages/MyCart/MyCart";
 import Checkout from "../pages/Checkout/Checkout";
+import OrderHistory from "../pages/OrderHistory/OrderHistory";
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path: "/cart",
         element: <MyCart></MyCart>
+      },
+      {
+        path: "/cart/orderHistory",
+        element: <OrderHistory></OrderHistory>
       },
       {
         path: "/cart/checkout/:id",

@@ -2,53 +2,32 @@ import { useEffect, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 import useAxios from '../../hooks/useAxios';
-import toast from 'react-hot-toast';
-import MyCartTable from '../../components/MyCartTable';
+import OrderHistoryTable from '../../components/OrderHistoryTable';
 import SectionTitle from '../../components/SectionTitle';
 
 
-const MyCart = () => {
+const OrderHistory = () => {
 
     // State for storing cart products
-    const [cartProduct, setCartProduct] = useState([]);
+    const [paidProducts, setCartProduct] = useState([]);
     const API = useAxios();
 
     // Fetch carted products
     useEffect(() => {
-        API('cartProducts')
+        API('/paidProducts')
             .then((res) => {
                 setCartProduct(res.data);
             })
             .catch((err) => console.error(err));
     }, []);
 
-
-    // Function to handle product deletion
-    const handleDelete = _id => {
-
-        API.delete(`/cartProducts/${_id}`)
-            .then(data => {
-                if (data?.data?.deletedCount > 0) {
-                    toast.success("Product Deleted successfully!");
-
-                    const remaining = cartProduct.filter(product => product._id !== _id);
-                    setCartProduct(remaining);
-                }
-            })
-    }
-
-    //   calculating total price of cart products
-    const totalAmount = cartProduct.reduce((sum, item) => item.price + sum, 0);
-
-
     return (
         <div>
             <Helmet>
-                <title>TECH TROVE | Cart</title>
+                <title>TECH TROVE | Order History</title>
             </Helmet>
-            <SectionTitle heading='Welcome To MY Cart'></SectionTitle>
+            <SectionTitle heading='Order History'></SectionTitle>
             <div className="flex items-center gap-5 justify-end mb-5">
-                <p className="text-lg font-semibold">Total: ${totalAmount}</p>
                 <Link to="/cart/orderHistory">
                     <button className='btn btn-outline'>Order History</button>
                 </Link>
@@ -65,17 +44,17 @@ const MyCart = () => {
                                 <th className='text-center'>Name</th>
                                 <th className='text-center'>Price</th>
                                 <th className='text-center'>Rating</th>
-                                <th className='text-center'>Payment</th>
-                                <th className='text-center'>Delete</th>
+                                <th className='text-center'>Status</th>
                             </tr>
                         </thead>
+            
+
                         {
-                            cartProduct.map((item, index) => <MyCartTable
+                            paidProducts.map((item, index) => <OrderHistoryTable
                                 index={index}
                                 key={item._id}
                                 item={item}
-                                handleDelete={handleDelete}
-                            ></MyCartTable>)
+                            ></OrderHistoryTable>)
                         }
                     </table>
                 </div>
@@ -84,4 +63,4 @@ const MyCart = () => {
     );
 };
 
-export default MyCart;
+export default OrderHistory;
