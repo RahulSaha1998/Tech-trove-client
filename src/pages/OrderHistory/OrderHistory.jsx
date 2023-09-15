@@ -28,8 +28,8 @@ const OrderHistory = () => {
             </Helmet>
             <SectionTitle heading='Order History'></SectionTitle>
             <div className="flex items-center gap-5 justify-end mb-5">
-                <Link to="/cart/orderHistory">
-                    <button className='btn btn-outline'>Order History</button>
+                <Link to="/cart">
+                    <button className='btn btn-outline'>My Cart</button>
                 </Link>
             </div>
             <div className="overflow-x-auto">
@@ -47,8 +47,6 @@ const OrderHistory = () => {
                                 <th className='text-center'>Status</th>
                             </tr>
                         </thead>
-            
-
                         {
                             paidProducts.map((item, index) => <OrderHistoryTable
                                 index={index}

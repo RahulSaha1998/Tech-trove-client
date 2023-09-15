@@ -15,6 +15,12 @@ const CardBody = ({ item }) => {
     const handelAddToCart = item => {
         console.log(item);
 
+        // Do not proceed if the quantity is 0 or less
+        if (quantity <= 0) {
+            toast.error("Product is out of stock!");
+            return; 
+        }
+
         const cartItem = {
             product_name,
             price: parseFloat(price),
@@ -40,7 +46,7 @@ const CardBody = ({ item }) => {
 
 
     return (
-        <div className="card w-full h-full bg-base-300 shadow-xl">
+        <div className="card w-full h-full bg-slate-200 shadow-xl">
             <figure><img className="rounded-xl my-5 lg:h-52" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title"><span className='text-red-600 font-bold'>Product:</span>
@@ -66,12 +72,12 @@ const CardBody = ({ item }) => {
                 <div className="flex justify-between">
                     <button
                         onClick={() => handelAddToCart(item)}
-                        className='btn btn-info gap-2'
+                        className='btn btn-outline gap-2'
                     >Add to Cart
                     </button>
 
                     <button
-                        className='btn btn-info gap-2'
+                        className='btn btn-outline gap-2'
                     ><Link
                         to={`/details/${_id}`}
                     >View Details </Link>

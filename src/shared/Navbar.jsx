@@ -7,6 +7,11 @@ const Navbar = () => {
     // toggle the navbar for responsive display
     const [isOpen, setIsOpen] = useState(false);
 
+
+
+
+     
+
     //   navbar menu items
     const navItems = (
         <>

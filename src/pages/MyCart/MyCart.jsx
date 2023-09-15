@@ -66,7 +66,7 @@ const MyCart = () => {
                                 <th className='text-center'>Price</th>
                                 <th className='text-center'>Rating</th>
                                 <th className='text-center'>Payment</th>
-                                <th className='text-center'>Delete</th>
+                                <th className='text-center'>Action</th>
                             </tr>
                         </thead>
                         {

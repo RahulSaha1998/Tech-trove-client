@@ -17,7 +17,7 @@ const MyCartTable = ({ item, index, handleDelete }) => {
                     <td className="text-center">{rating}</td>
                     <td className='text-center'>
                         <Link to={`/cart/checkout/${_id}`} >
-                            <button className='btn btn-outline'>Pay</button>
+                            <button className='btn btn-info'>Pay</button>
                         </Link>
                     </td>
                     <td className='text-center'><button onClick={() => handleDelete(_id)} className='btn btn-error'>Delete</button></td>

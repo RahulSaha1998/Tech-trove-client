@@ -2,7 +2,7 @@
 const CheckoutForm = ({handlePayment}) => {
     return (
         <>
-            <form onSubmit={handlePayment} className="bg-slate-200 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
+            <form onSubmit={handlePayment} className="bg-zinc-400 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
                 <div className="mb-4">
                     <label htmlFor="cardNumber" className="block mb-2 font-bold">
                         Card Number
@@ -57,7 +57,7 @@ const CheckoutForm = ({handlePayment}) => {
                 </div>
                 <button         
                     type="submit"
-                    className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded w-full"
+                    className="btn btn-outline info px-4 py-2 rounded w-full"
                 >
                     Pay Now
                 </button>
