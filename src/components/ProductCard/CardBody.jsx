@@ -21,6 +21,7 @@ const CardBody = ({ item }) => {
             quantity: parseInt(quantity),
             rating: parseFloat(rating),
             description,
+            p_id: _id,
             image
         }
 
