@@ -5,7 +5,7 @@ const UpdateProductForm = ({loadedProduct, handelUpdateTask}) => {
 
     return (
         <>
-            <form onSubmit={handelUpdateTask} className='w-[80%] mx-auto '>
+            <form onSubmit={handelUpdateTask} className='py-5 w-[80%] mx-auto '>
                 <div className='grid grid-cols-2 gap-5'>
                     <div className="form-control">
                         <label className="label">
@@ -60,9 +60,8 @@ const UpdateProductForm = ({loadedProduct, handelUpdateTask}) => {
                         className="textarea textarea-info w-full"
                     />
                 </div>
-
                 <div className="form-control mt-6 text-center">
-                    <input className="btn btn-block btn-info mb-6" type="submit" value='update' />
+                    <input className="btn btn-active btn-neutral mb-6" type="submit" value='update' />
                 </div>
             </form>
         </>

@@ -52,14 +52,14 @@ const Update = () => {
             <div >
                 <SectionTitle heading='Update Product' />
             </div>
-            <div className="bg-slate-200 rounded-lg shadow-xl mt-5">
-                <div className='bg-slate-200 rounded-lg shadow-xl p-7'>
-                    <UpdateProductForm
+            <div className="bg-zinc-400 rounded-lg shadow-xl mt-5 md:w-[50%] mx-auto">
+
+                <UpdateProductForm
                     key={loadedProduct._id}
                     loadedProduct={loadedProduct}
                     handelUpdateTask={handelUpdateTask}
-                    ></UpdateProductForm>
-                </div>
+                ></UpdateProductForm>
+
             </div>
         </div>
     );

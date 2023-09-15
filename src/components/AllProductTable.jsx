@@ -14,7 +14,7 @@ const AllProductTable = ({ item, index, handleDelete }) => {
                     <td className="text-center">${price}</td>
                     <td className="text-center">{quantity}</td>
                     <td className="text-center">{rating}</td>
-                    <td className='text-center'><Link to={`/dashboard/updateProduct/${_id}`}>
+                    <td className='text-center'><Link to={`/updateProduct/${_id}`}>
                         <button className='btn btn-info'>Update</button>
                     </Link></td>
                     <td className='text-center'><button onClick={() => handleDelete(_id)} className='btn btn-error'>Delete</button></td>
