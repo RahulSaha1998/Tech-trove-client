@@ -8,6 +8,7 @@ import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 import MyCart from "../pages/MyCart/MyCart";
 import Checkout from "../pages/Checkout/Checkout";
 import OrderHistory from "../pages/OrderHistory/OrderHistory";
+import NotFoundPage from "../components/NotFoundPage";
 
 
 const router = createBrowserRouter([
@@ -53,6 +54,10 @@ const router = createBrowserRouter([
       },
     ]
   },
+  {
+    path: '*',
+    element: <NotFoundPage></NotFoundPage>
+  }
 ]);
 
 export default router;
