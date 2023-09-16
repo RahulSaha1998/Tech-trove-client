@@ -47,7 +47,7 @@ const CardBody = ({ item }) => {
 
 
     return (
-        <div className="card w-full h-full bg-slate-200 shadow-xl">
+        <div className="card w-full h-full bg-base-300 shadow-xl">
             <figure><img className="rounded-xl my-5 lg:h-52" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title"><span className='text-red-600 font-bold'>Product:</span>

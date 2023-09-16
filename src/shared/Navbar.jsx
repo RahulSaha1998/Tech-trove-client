@@ -1,15 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import NavItem from "../components/NavItem";
+import DarkMode from "../components/DarkMode";
 
 const Navbar = () => {
 
     // toggle the navbar for responsive display
     const [isOpen, setIsOpen] = useState(false);
-
-
-
-
      
 
     //   navbar menu items
@@ -19,6 +16,7 @@ const Navbar = () => {
             <NavItem route="/addproduct" name="Add Product"></NavItem>
             <NavItem route="/allproducts" name="All Products"></NavItem>
             <NavItem route="/cart" name="Cart"></NavItem>
+            <div className="text-gray-300"><DarkMode></DarkMode></div>
         </>
     );
 

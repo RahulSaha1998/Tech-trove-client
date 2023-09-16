@@ -27,17 +27,17 @@ const router = createBrowserRouter([
       {
         path: '/allproducts',
         element: <AllProducts></AllProducts>,
-        loader: () => fetch('http://localhost:5000/products')
+        loader: () => fetch('https://tech-trove-server-beta.vercel.app/products')
       },
       {
         path: "/details/:id",
         element: <ViewDetails></ViewDetails>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-trove-server-beta.vercel.app/products/${params.id}`)
       },
       {
         path: "/updateProduct/:id",
         element: <UpdateProduct></UpdateProduct>,
-        loader: ({ params }) => fetch(`http://localhost:5000/products/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-trove-server-beta.vercel.app/products/${params.id}`)
       },
       {
         path: "/cart",
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
       {
         path: "/cart/checkout/:id",
         element: <Checkout></Checkout>,
-        loader: ({ params }) => fetch(`http://localhost:5000/cartProducts/${params.id}`)
+        loader: ({ params }) => fetch(`https://tech-trove-server-beta.vercel.app/cartProducts/${params.id}`)
       },
     ]
   },
