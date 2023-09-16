@@ -7,12 +7,12 @@ import { Link } from 'react-router-dom';
 const NotFoundPage = () => {
     return (
         <div className='flex justify-center items-center'>
-            <div>
+            <div className='w-96'>
                 <Lottie animationData={errorPage}></Lottie>
                 <div className='flex flex-col gap-5 items-center'>
-                    <h2 className='text-center font-bold text-red-600 text-4xl'>404 Page Not Found!</h2>
+                    <h2 className='text-center font-bold text-yellow-600 text-3xl'>Page Not Found!!</h2>
                     <div>
-                        <Link to='/'><button className='btn btn-info gap-2'><FaArrowLeft /> Bact To Home</button></Link>
+                        <Link to='/'><button className='btn btn-outline gap-2'><FaArrowLeft /> Bact To Home</button></Link>
                     </div>
                 </div>
             </div>

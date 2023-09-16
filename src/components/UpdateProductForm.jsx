@@ -1,6 +1,7 @@
 
 const UpdateProductForm = ({loadedProduct, handelUpdateTask}) => {
 
+    //destruct data from loadedProduct
     const { price, quantity, product_name, description, rating } = loadedProduct;
 
     return (

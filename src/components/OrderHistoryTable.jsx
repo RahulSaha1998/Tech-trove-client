@@ -1,6 +1,7 @@
 const MyCartTable = ({ item, index }) => {
 
-    const { _id, price, product_name, image, rating, status } = item;
+    //destruct item from props
+    const { _id, price, product_name, image, rating, selectedItem, status } = item;
 
 
     return (
@@ -12,6 +13,7 @@ const MyCartTable = ({ item, index }) => {
                     <td className="text-center">{product_name}</td>
                     <td className="text-center">${price}</td>
                     <td className="text-center">{rating}</td>
+                    <td className="text-center">{selectedItem}</td>
                     <td className='text-center'>{status}</td>
                 </tr>
             </tbody>

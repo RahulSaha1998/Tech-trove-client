@@ -37,7 +37,7 @@ const Update = () => {
         API.put(`/products/${loadedProduct._id}`, updatedProduct)
             .then(data => {
                 if (data?.data?.modifiedCount > 0) {
-                    toast.success("Product updated successfully!");
+                    toast.success("Product Updated Successfully!");
                     navigate('/allProducts')
                 }
             })

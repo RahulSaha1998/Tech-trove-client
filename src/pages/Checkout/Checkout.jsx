@@ -5,11 +5,13 @@ import CheckoutForm from '../../components/CheckoutForm';
 import useAxios from '../../hooks/useAxios';
 
 const Checkout = () => {
-    
+
     const navigate = useNavigate()
     const API = useAxios();
 
     const loaderData = useLoaderData();
+
+    //destruct data from loaderData
     const { _id, p_id, price, product_name, image, rating, description } = loaderData;
 
 
@@ -21,7 +23,8 @@ const Checkout = () => {
             price: parseFloat(price),
             rating: parseFloat(rating),
             description,
-            status: 'paid',
+            status: 'Paid',
+            selectedItem: 1,
             p_id,
             image
         }
@@ -32,14 +35,14 @@ const Checkout = () => {
             .then((data) => {
                 if (data?.data?.insertedId) {
                     toast.success('Payment Successful!')
-                    navigate('/cart');    
+                    navigate('/cart/orderHistory');
                 }
             })
             .catch((err) => console.log(err));
 
 
 
-        
+
     }
 
     return (
@@ -54,7 +57,6 @@ const Checkout = () => {
                 handlePayment={handlePayment}
             >
             </CheckoutForm>
-
         </div>
     );
 };

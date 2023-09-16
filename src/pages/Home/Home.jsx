@@ -3,6 +3,7 @@ import ProductCard from "../../components/ProductCard/ProductCard";
 import CustomerReview from "../../components/CustomerReview";
 
 const Home = () => {
+
     return (
         <>
             <Helmet>

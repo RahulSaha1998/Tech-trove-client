@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <div className="col-span-1">
-            <h3 className="text-white text-lg font-bold">Company</h3>
+            <h3 className="text-yellow-500 text-lg font-bold">Company</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
@@ -29,7 +29,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-span-1">
-            <h3 className="text-white text-lg font-bold">Categories</h3>
+            <h3 className="text-yellow-500 text-lg font-bold">Categories</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
@@ -54,7 +54,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-span-1">
-            <h3 className="text-white text-lg font-bold">Follow Us</h3>
+            <h3 className="text-yellow-500 text-lg font-bold">Follow Us</h3>
             <ul className="mt-4 space-y-2">
               <li>
                 <a href="#" className="text-gray-300 hover:text-white">
@@ -79,7 +79,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="col-span-1">
-            <h3 className="text-white text-lg font-bold">Newsletter</h3>
+            <h3 className="text-yellow-500 text-lg font-bold">Newsletter</h3>
             <p className="mt-4 text-gray-300">
               Subscribe to our newsletter to receive updates and exclusive
               offers.

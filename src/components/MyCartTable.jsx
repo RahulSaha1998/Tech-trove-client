@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const MyCartTable = ({ item, index, handleDelete }) => {
 
-    const { _id, price, product_name, image, rating } = item;
+    const { _id, price, product_name, image, selectedItem, rating } = item;
 
 
     return (
@@ -15,6 +15,7 @@ const MyCartTable = ({ item, index, handleDelete }) => {
                     <td className="text-center">{product_name}</td>
                     <td className="text-center">${price}</td>
                     <td className="text-center">{rating}</td>
+                    <td className="text-center">{selectedItem}</td>
                     <td className='text-center'>
                         <Link to={`/cart/checkout/${_id}`} >
                             <button className='btn btn-info'>Pay</button>

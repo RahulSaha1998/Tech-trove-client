@@ -14,7 +14,7 @@ const OrderHistory = () => {
 
     // Fetch carted products
     useEffect(() => {
-        API('/paidProducts')
+        API.get('/paidProducts')
             .then((res) => {
                 setCartProduct(res.data);
             })
@@ -27,7 +27,7 @@ const OrderHistory = () => {
                 <title>TECH TROVE | Order History</title>
             </Helmet>
             <SectionTitle heading='Order History'></SectionTitle>
-            <div className="flex items-center gap-5 justify-end mb-5">
+            <div className="flex items-center gap-5 justify-end mt-2 mb-2">
                 <Link to="/cart">
                     <button className='btn btn-outline'>My Cart</button>
                 </Link>
@@ -44,6 +44,7 @@ const OrderHistory = () => {
                                 <th className='text-center'>Name</th>
                                 <th className='text-center'>Price</th>
                                 <th className='text-center'>Rating</th>
+                                <th className='text-center'>Quantity</th>
                                 <th className='text-center'>Status</th>
                             </tr>
                         </thead>

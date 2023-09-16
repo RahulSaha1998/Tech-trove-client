@@ -15,7 +15,7 @@ const MyCart = () => {
 
     // Fetch carted products
     useEffect(() => {
-        API('cartProducts')
+        API.get('cartProducts')
             .then((res) => {
                 setCartProduct(res.data);
             })
@@ -37,7 +37,7 @@ const MyCart = () => {
             })
     }
 
-    //   calculating total price of cart products
+    //calculating total price of cart products
     const totalAmount = cartProduct.reduce((sum, item) => item.price + sum, 0);
 
 
@@ -47,7 +47,7 @@ const MyCart = () => {
                 <title>TECH TROVE | Cart</title>
             </Helmet>
             <SectionTitle heading='Welcome To MY Cart'></SectionTitle>
-            <div className="flex items-center gap-5 justify-end mb-5">
+            <div className="flex items-center gap-5 justify-end mt-2 mb-2">
                 <p className="text-lg font-semibold">Total: ${totalAmount}</p>
                 <Link to="/cart/orderHistory">
                     <button className='btn btn-outline'>Order History</button>
@@ -65,6 +65,7 @@ const MyCart = () => {
                                 <th className='text-center'>Name</th>
                                 <th className='text-center'>Price</th>
                                 <th className='text-center'>Rating</th>
+                                <th className='text-center'>Quantity</th>
                                 <th className='text-center'>Payment</th>
                                 <th className='text-center'>Action</th>
                             </tr>

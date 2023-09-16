@@ -1,5 +1,5 @@
 
-const CheckoutForm = ({handlePayment}) => {
+const CheckoutForm = ({ handlePayment }) => {
     return (
         <>
             <form onSubmit={handlePayment} className="bg-zinc-400 shadow-lg rounded px-8 pt-6 pb-8 mb-4">
@@ -55,7 +55,7 @@ const CheckoutForm = ({handlePayment}) => {
                         />
                     </div>
                 </div>
-                <button         
+                <button
                     type="submit"
                     className="btn btn-outline info px-4 py-2 rounded w-full"
                 >

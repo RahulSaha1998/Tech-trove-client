@@ -7,11 +7,11 @@ import useAxios from "../../hooks/useAxios";
 import toast from "react-hot-toast";
 
 const AllProducts = () => {
+    
     const API = useAxios();
     const loadedProduct = useLoaderData();
 
     const [products, setProducts] = useState(loadedProduct);
-
 
     const handleDelete = _id => {
 
@@ -50,7 +50,7 @@ const AllProducts = () => {
                             </tr>
                         </thead>
                         {
-                            products.map((item, index) => <AllProductTable
+                            products?.map((item, index) => <AllProductTable
                                 key={item._id}
                                 item={item}
                                 index={index}
