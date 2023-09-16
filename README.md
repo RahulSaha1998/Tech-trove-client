@@ -6,7 +6,8 @@
 - Server Site Code repo link -> https://github.com/RahulSaha1998/Tech-trove-server
 
 
-## Basic features Details
+## Basic Features Details
+- This is mobile responsive website.
 - There is dark mode and light mode section in navbar.
 - Customer Can not select the product if the product quantity is 0.
 - After Payment a product, that product from Cart will be removed and the quantity of the main product will decrease by -1.
@@ -21,4 +22,5 @@
 - Customer can visit the product card, added to Cart and can see the details of the product from Homepage.
 - The added product will be shown on a shopping cart.
 - Customer can see, payment and delete the added product from the Cart.
-- Customer can place the Order. After Payment a product, that product from Cart will be removed and customer will be redirect to Order History page and can see all the ordered product.
+- Customer can place the Order. 
+- After Payment a product, that product from Cart will be removed and customer will be redirect to Order History page and can see all the ordered product.
